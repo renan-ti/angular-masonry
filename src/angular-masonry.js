@@ -64,7 +64,6 @@
           if (bricks[id] === undefined) {
             // Keep track of added elements.
             bricks[id] = true;
-            defaultLoaded(element);
             $element.masonry(method, element, true);
           }
         }
@@ -74,6 +73,7 @@
           // that I couldn't fix. If you know how to dynamically add a
           // callback so one could say <masonry loaded="callback($element)">
           // please submit a pull request!
+          defaultLoaded(element);
           self.scheduleMasonryOnce('layout');
         }
 
