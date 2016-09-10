@@ -166,7 +166,7 @@
         require: '^masonry',
         scope: true,
         link: {
-          pre: function preLink(scope, element, attrs, ctrl) {
+          post: function preLink(scope, element, attrs, ctrl) {
             var id = scope.$id, index;
             var prependBrick = scope.$eval(attrs.prepend);
             var method = prependBrick ? 'prepended' : 'appended';
